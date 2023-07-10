@@ -7,8 +7,8 @@ import kotlinx.coroutines.launch
 
 class CounterRepository(private val counterDao: CounterDao) {
 
-    val allEmployees = MutableLiveData<List<Counter>>()
-    val foundEmployee = MutableLiveData<Counter>()
+    val allCounters = MutableLiveData<List<Counter>>()
+    val foundCounters = MutableLiveData<Counter>()
     private val coroutineScope = CoroutineScope(Dispatchers.Main)
 
     fun addCounter(newCounter: Counter) {
@@ -17,7 +17,13 @@ class CounterRepository(private val counterDao: CounterDao) {
         }
     }
 
-    fun getCounter(counterId: String): Counter {
-        return counterDao.findCounterById(counterId)
+    fun getAllCounters() {
+        coroutineScope.launch(Dispatchers.IO) {
+            allCounters.postValue(counterDao.getAllCounters());
+        }
+    }
+
+    fun getCounter(counterId: String) {
+        counterDao.findCounterById(counterId)
     }
 }
