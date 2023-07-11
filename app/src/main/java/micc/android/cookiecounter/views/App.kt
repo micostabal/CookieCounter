@@ -18,7 +18,7 @@ fun App(counterViewModel: CounterViewModel) {
             AddCounterScreen(navigation = navController, counterViewModel)
         }
         composable("counter") {
-            CounterScreen(navigation = navController)
+            CounterScreen(navigation = navController, counterViewModel)
         }
         composable("see_all_counters") {
             SeeAllCountersScreen(navigation = navController, counterViewModel)
