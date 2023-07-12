@@ -64,6 +64,16 @@ fun CounterScreen(navigation: NavController, counterViewModel: CounterViewModel)
             }) {
                 Text("Add Cookie!")
             }
+            Button(onClick = {
+                val currentCount: Int = counterList[selectedIndex].count
+
+                counterViewModel.setCount(
+                    counterList[selectedIndex],
+                    currentCount-1
+                )
+            }) {
+                Text("Remove Cookie!")
+            }
         } else {
             Text("No counters on the list")
         }
