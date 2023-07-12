@@ -24,5 +24,10 @@ class CounterViewModel @Inject constructor(private val counterRepository: Counte
         getAllCounters()
     }
 
+    fun setCount(counter: Counter, newCount: Int) {
+        counterRepository.setCount(counter, newCount)
+        getAllCounters()
+    }
+
     val counterList: LiveData<List<Counter>> = counterRepository.allCounters
 }

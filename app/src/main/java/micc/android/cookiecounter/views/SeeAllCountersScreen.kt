@@ -28,7 +28,10 @@ fun SeeAllCountersScreen(navigation: NavController, counterViewModel: CounterVie
 
         if (counterList.isNotEmpty()) {
             for (counter in counterList) {
-                Text(counter.name)
+                val name = counter.name
+                val count = counter.count
+
+                Text("$name, $count")
             }
         } else {
             Text("No counters created yet...")

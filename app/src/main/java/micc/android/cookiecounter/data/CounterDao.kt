@@ -17,6 +17,9 @@ interface CounterDao {
     @Query("SELECT * FROM counters")
     fun getAllCounters(): List<Counter>
 
+    @Query("UPDATE counters SET count = :newCount WHERE id=:counterId")
+    fun setCount(counterId: String, newCount: Int)
+
     @Update
     suspend fun updateCounterDetails(employee: Counter)
 

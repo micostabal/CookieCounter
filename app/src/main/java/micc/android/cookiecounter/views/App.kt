@@ -9,6 +9,7 @@ import micc.android.cookiecounter.CounterViewModel
 @Composable
 fun App(counterViewModel: CounterViewModel) {
     val navController = rememberNavController()
+    counterViewModel.getAllCounters()
 
     NavHost(navController = navController, startDestination = "home") {
         composable("home") {

@@ -26,4 +26,10 @@ class CounterRepository(private val counterDao: CounterDao) {
     fun getCounter(counterId: String) {
         counterDao.findCounterById(counterId)
     }
+
+    fun setCount(counter: Counter, newCount: Int) {
+        coroutineScope.launch(Dispatchers.IO) {
+            counterDao.setCount(counter.id, newCount)
+        }
+    }
 }
