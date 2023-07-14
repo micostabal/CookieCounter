@@ -11,7 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextAlign
 import androidx.navigation.NavController
-import micc.android.cookiecounter.CounterViewModel
+import micc.android.cookiecounter.viewmodel.CounterViewModel
 import micc.android.cookiecounter.data.Counter
 import java.util.UUID
 

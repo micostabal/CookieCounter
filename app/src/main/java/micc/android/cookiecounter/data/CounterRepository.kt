@@ -28,4 +28,10 @@ class CounterRepository(private val counterDao: CounterDao) {
             counterDao.setCount(counter.id, newCount)
         }
     }
+
+    fun deleteCounter(counter: Counter) {
+        coroutineScope.launch(Dispatchers.IO) {
+            counterDao.deleteCounter(counter)
+        }
+    }
 }

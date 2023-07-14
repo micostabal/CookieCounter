@@ -1,4 +1,4 @@
-package micc.android.cookiecounter
+package micc.android.cookiecounter.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
@@ -26,6 +26,11 @@ class CounterViewModel @Inject constructor(private val counterRepository: Counte
 
     fun setCount(counter: Counter, newCount: Int) {
         counterRepository.setCount(counter, newCount)
+        getAllCounters()
+    }
+
+    fun deleteCounter(counter: Counter) {
+        counterRepository.deleteCounter(counter)
         getAllCounters()
     }
 

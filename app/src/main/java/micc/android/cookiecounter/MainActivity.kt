@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import dagger.hilt.android.AndroidEntryPoint
 import micc.android.cookiecounter.ui.theme.CookieCounterTheme
+import micc.android.cookiecounter.viewmodel.CounterViewModel
 import micc.android.cookiecounter.views.*
 
 @AndroidEntryPoint

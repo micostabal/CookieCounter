@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import micc.android.cookiecounter.CounterViewModel
+import micc.android.cookiecounter.viewmodel.CounterViewModel
 
 @Composable
 fun App(counterViewModel: CounterViewModel) {

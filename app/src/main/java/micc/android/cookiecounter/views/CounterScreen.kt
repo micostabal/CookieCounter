@@ -14,7 +14,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import micc.android.cookiecounter.CounterViewModel
+import micc.android.cookiecounter.viewmodel.CounterViewModel
 import micc.android.cookiecounter.data.Counter
 import micc.android.cookiecounter.views.components.HomeButton
 
